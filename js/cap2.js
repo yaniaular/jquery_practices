@@ -8,12 +8,27 @@
 
 $(document).ready( function(){
 
-        //alert("Hello World!");
-        //Simple alerta Hello World!    
+    /*Consultando elementos*/
+    
+    //Toma el valor de src de la primera imagen que encuentre
+    var imageSource = $('img').attr('src');
+    console.log(imageSource);  
+   
+    //Consulta el texto de los tags 'p'
+    var pContent = $('p').text();
+    console.log(pContent);
 
-        alert( $('img').attr('alt') ); 
-        alert(jQuery('img').attr('height'));
-        //Tomara la primera imagen 
-        //del documento y consulta el atributo dentro de attr('atributo_a_consultar')
-       
+    /*Configurando o reemplazando valor de los elementos*/
+    
+    //Los atributos a todas las imagenes que encuentre
+    $('img').attr({src: 'images/tomate.jpg', alt: 'tomate'});
+
+    /* Remover los atributos de un elemento*/
+    
+    //Remueve el atributo height de todos los elementos img
+    $('img').removeAttr('height');
+
+
+
+
 });
