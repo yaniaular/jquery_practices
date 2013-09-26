@@ -26,8 +26,34 @@ $(document).ready( function(){
     /* Remover los atributos de un elemento*/
     
     //Remueve el atributo height de todos los elementos img
-    $('img').removeAttr('height');
+    $('img').removeAttr('width');
 
+
+    /* Cambiando contenido HTMl*/
+    // si existe codigo html en el text del tag, lo tomará como código
+    var strongContent = $('strong').html()
+    var pContent = $('p').html()
+
+    console.log('Strong:' + strongContent + ' P:' + pContent)
+    
+    //Cambia el text de todos los strong que consiga por el
+    // contenido de pContent
+    //$('strong').html(pContent);
+    
+    //Cambia el text de todos los 'p' que consiga por el
+    // contenido de strongContent
+    //$('p').html(strongContent);
+
+    /* Cambiando contenido del texto*/
+    //si existe codigo html en el text del tag, lo tomará interpretado 
+
+    var strongContent = $('strong').text();
+    var pContent = $('p').text();
+    
+    console.log('2-Strong:' + strongContent + ' 2-P:' + pContent)
+    
+    $('strong').text(pContent);
+    $('p').text(strongContent);
 
 
 
